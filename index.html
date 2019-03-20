@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/4.1/examples/carousel/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    
+
+    <title>Brooklin Outdoor Film Festival</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Press+Start+2P" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <script>
+        $(function() {
+          var $tabButtonItem = $('#tab-button li'),
+              $tabSelect = $('#tab-select'),
+              $tabContents = $('.tab-contents'),
+              activeClass = 'is-active';
+
+              $tabButtonItem.first().addClass(activeClass);
+              $tabContents.not(':first').hide();
+
+              $tabButtonItem.find('a').on('click', function(e) {
+                var target = $(this).attr('href');
+
+                $tabButtonItem.removeClass(activeClass);
+                $(this).parent().addClass(activeClass);
+                $tabSelect.val(target);
+                $tabContents.hide();
+                $(target).show();
+                e.preventDefault();
+              });
+
+              $tabSelect.on('change', function() {
+                var target = $(this).val(),
+                    targetSelectNum = $(this).prop('selectedIndex');
+
+                $tabButtonItem.removeClass(activeClass);
+                $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+                $tabContents.hide();
+                $(target).show();
+              });
+        });
+    
+    </script>
+    </head>
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 d-none d-sm-block">
+                 <i class="fas fa-film"></i>
+            </div>
+            <div class="col-sm-10">
+                <header>
+                    <p>Brooklin Outdoor Film Festival</p>
+                </header>
+            </div>
+        </div>
+        <main role="main">
+
+            <div class="reel"></div>    
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+              <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item">
+                <img class="first-slide img-rounded" src="https://imgs.6sqft.com/wp-content/uploads/2018/09/11151813/Pier-6_Brooklyn-Bridge-Park.jpg" alt="First slide">
+                <div class="container">
+                  <div class="carousel-caption text-left">
+                    <h1>NEW YORK'S BIGGEST ENTERTAINMENT VENUE</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item active">
+                <img class="second-slide" src="http://ourbksocial.com/wp-content/uploads/2016/04/syfy-movies-with-a-view.jpg" alt="Second slide">
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>FREE ENTRANCE</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <!--<p><a class="btn btn-lg btn-primary" href="https://www.brooklynbridgepark.org/" role="button">Learn more</a></p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="third-slide" src="https://www.nycgo.com/images/articles/8329/20180504-outdoormovies-03__facebook.jpg" alt="Third slide">
+                <div class="container">
+                  <div class="carousel-caption text-right">
+                    <h1>AMAZING SUMMER EVENINGS</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <!--<p><a class="btn btn-lg btn-primary" href="https://www.brooklyndaily.com/" role="button">Browse gallery</a></p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev"  href="#myCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+            <div class="reel" style="transform: scaleY(-1)"></div>
+            <div class="scroll-text">
+                <p>PRE-REGISTRATION OPEN</p>
+            </div>
+      
+        
+            <div class="row">
+                <div class="col-md-7 mt-5 ">
+                    <div class="row">
+                        <div class="col-md-12 py-2 caixa">
+                            <h4>ABOUT</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper ante sit amet ante dictum, a facilisis quam convallis. Praesent sit amet purus euismod, placerat erat sit amet, euismod nisl. Etiam aliquam lacus erat, quis lacinia nisl convallis in. Proin malesuada arcu eleifend est euismod, ut molestie enim porta. Pellentesque.</p>
+                        </div>
+                        <div  class="col-md-12 py-2 mt-5 caixa">
+                            <h4>SCHEDULE</h4>
+                            <div class="tabs">
+                              <div class="tab-button-outer">
+                                <ul id="tab-button">
+                                  <li><a href="#tab01">AUG 5TH</a></li>
+                                  <li><a href="#tab02">AUG 6TH</a></li>
+                                  <li><a href="#tab03">AUG 7TH</a></li>
+                                  <li><a href="#tab04">AUG 8TH</a></li>
+
+                                </ul>
+                              </div>
+                              <div class="tab-select-outer">
+                                <select id="tab-select">
+                                  <option value="#tab01">AUG 5TH</option>
+                                  <option value="#tab02">AUG 6TH</option>
+                                  <option value="#tab03">AUG 7TH</option>
+                                  <option value="#tab04">AUG 8TH</option>
+
+                                </select>
+                              </div>
+
+                              <div id="tab01" class="tab-contents">
+                                 <ul class="row list-unstyled">
+                                    <li class="col-sm-4">6pm
+                                        <div>
+                                            <p>Alladin</p>
+                                            <a href="https://www.imdb.com/title/tt6139732/" target="_blank">
+                                              <img class="img-thumbnail" src="https://m.media-amazon.com/images/M/MV5BMjI1OTI3ODc0M15BMl5BanBnXkFtZTgwNDE4OTE1NjM@._V1_SY1000_CR0,0,674,1000_AL_.jpg">
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-4">8pm
+                                         <div>
+                                            <p>Yip Man 4</p>
+                                            <a href="https://www.imdb.com/title/tt2076298/" target="_blank">
+                                              <img class="img-thumbnail" src="https://m.media-amazon.com/images/M/MV5BY2FkY2QzOTctNmViZi00YTU5LTk5ZmQtMTJhMzFiOTIyZDc2XkEyXkFqcGdeQXVyNzQ2NTQzMDk@._V1_.jpg">
+                                            </a> 
+                                          </div>
+                                        </li>
+                                    <li class="col-sm-4">10pm
+                                          <div>
+                                            <p>Captain Marvel</p>
+                                            <a href="https://www.imdb.com/title/tt4154664/" target="_blank">
+                                              <img class="img-thumbnail" src="https://m.media-amazon.com/images/M/MV5BMTYzNDc5NzY5OF5BMl5BanBnXkFtZTgwMjA0OTUzNjM@._V1_SY1000_CR0,0,674,1000_AL_.jpg">
+                                            </a> 
+                                          </div>
+                                        </li>
+                                </ul>
+                              </div>
+                              <div id="tab02" class="tab-contents">
+                                <ul class="row list-unstyled">
+                                    <li class="col-sm-4">6pm
+                                        <div>
+                                            <p>The Adams Family</p>
+                                            <a href="https://www.imdb.com/title/tt1620981/" target="_blank">
+                                              <img class="img-thumbnail" src="https://m.media-amazon.com/images/M/MV5BMmM1YzFjYjItZDZiZi00ZmUzLWI3N2QtNzZiYzNjYWRmYjMzXkEyXkFqcGdeQXVyODQ1MTI4NTA@._V1_UY268_CR156,0,182,268_AL_.jpg">
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-4">8pm
+                                          <div>
+                                            <p>Rambo V</p>    
+                                            <a href="https://www.imdb.com/title/tt1206885/" target="_blank">
+                                              <img class="img-thumbnail" src="https://m.media-amazon.com/images/M/MV5BMmZlMmIwNjktOTI0OC00NDJkLTk5MjgtZDA5N2YwOTgyZDUwXkEyXkFqcGdeQXVyNDUyMTU0NDg@._V1_SY1000_CR0,0,975,1000_AL_.jpg">
+                                            </a> 
+                                          </div>
+                                        </li>
+                                    <li class="col-sm-4">10pm
+                                          <div>
+                                            <p>IT - Chapter 2</p>    
+                                            <a href="https://www.imdb.com/title/tt7349950/" target="_blank">
+                                              <img class="img-thumbnail" src="https://m.media-amazon.com/images/M/MV5BNmU3NWI0YWYtMGM1NC00OTIwLWIzNGUtYTg3ZDkzMzFlYjZiXkEyXkFqcGdeQXVyNTY2NDExMTA@._V1_SY1000_CR0,0,810,1000_AL_.jpg">
+                                            </a> 
+                                          </div>
+                                        </li>
+                                </ul>
+                              </div>
+                              <div id="tab03" class="tab-contents">
+                                <ul class="row list-unstyled">
+                                    <li class="col-sm-4">6pm
+                                        <div>
+                                            <p>The Secret Life of Pets 2</p>
+                                            <a href="https://www.imdb.com/title/tt5113040/" target="_blank">
+                                              <img class="img-thumbnail" src="https://m.media-amazon.com/images/M/MV5BMTA2NzM0MjA0MTJeQTJeQWpwZ15BbWU4MDk1MzYwNzYz._V1_SY1000_CR0,0,631,1000_AL_.jpg">
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-4">8pm
+                                          <div>
+                                            <p>Glass</p>
+                                            <a href="https://www.imdb.com/title/tt6823368/" target="_blank">
+                                              <img class="img-thumbnail" src="https://m.media-amazon.com/images/M/MV5BMTE0NDQ0MzgyODdeQTJeQWpwZ15BbWU4MDc5MTQzOTUz._V1_SY1000_CR0,0,631,1000_AL_.jpg">
+                                            </a> 
+                                          </div>
+                                        </li>
+                                    <li class="col-sm-4">10pm
+                                          <div>
+                                            <p>John Wick: Chapter 3</p>    
+                                            <a href="https://www.imdb.com/title/tt6146586/" target="_blank">
+                                              <img class="img-thumbnail" src="https://m.media-amazon.com/images/M/MV5BNzZlMGNlYTYtMmY4NC00ODZkLWI2ZDktNjY1YWE5MDkyZmVlXkEyXkFqcGdeQXVyODg2Nzg3OTE@._V1_SX726_CR0,0,726,999_AL_.jpg">
+                                            </a> 
+                                          </div>
+                                        </li>
+                                </ul>
+                              </div>
+                              <div id="tab04" class="tab-contents">
+                                <ul class="row list-unstyled">
+                                    <li class="col-sm-4">6pm
+                                        <div>
+                                            <p>The Lion King</p>
+                                            <a href="https://www.imdb.com/title/tt6105098/" target="_blank">
+                                              <img class="img-thumbnail" src="https://m.media-amazon.com/images/M/MV5BMTg5NTY3OTU2N15BMl5BanBnXkFtZTgwOTgyOTA4NjM@._V1_SY1000_SX800_AL_.jpg">
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-4">8pm
+                                          <div>
+                                            <p>Hellboy</p>  
+                                            <a href="https://www.imdb.com/title/tt2274648/" target="_blank">
+                                              <img class="img-thumbnail" src="https://m.media-amazon.com/images/M/MV5BMTkyODYzNzg3Ml5BMl5BanBnXkFtZTgwNzYwNDU0NjM@._V1_SY1000_CR0,0,674,1000_AL_.jpg">
+                                            </a> 
+                                          </div>
+                                        </li>
+                                    <li class="col-sm-4">10pm
+                                          <div>
+                                            <p>X-Men: Dark Phoenix</p>
+                                            <a href="https://www.imdb.com/title/tt6565702" target="_blank">
+                                              <img class="img-thumbnail" src="https://m.media-amazon.com/images/M/MV5BMjM0NjcyMzU5Nl5BMl5BanBnXkFtZTgwNTE2MzU0NjM@._V1_SY1000_CR0,0,674,1000_AL_.jpg">
+                                            </a> 
+                                          </div>
+                                        </li>
+                                </ul>
+                              </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 offset-md-1 mt-5 py-2 caixa news-box">
+                    <h4>NEWS & ANOUNCEMENTS</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut mi ut sapien sollicitudin cursus. In non purus vitae ante vehicula consectetur in ut neque. Nulla facilisi. In massa dolor, convallis eu risus vitae, feugiat scelerisque dolor. In dapibus felis consectetur felis rutrum mollis. Fusce efficitur massa vitae nisi aliquam convallis. Sed tristique efficitur sem sit amet euismod. Ut a leo tincidunt, porttitor nunc a, rhoncus est. Nulla ornare condimentum ligula vitae lacinia.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut mi ut sapien sollicitudin cursus. In non purus vitae ante vehicula consectetur in ut neque. Nulla facilisi. In massa dolor, convallis eu risus vitae, feugiat scelerisque dolor. In dapibus felis consectetur felis rutrum mollis. Fusce efficitur massa vitae nisi aliquam convallis. Sed tristique efficitur sem sit amet euismod. Ut a leo tincidunt, porttitor nunc a, rhoncus est. Nulla ornare condimentum ligula vitae lacinia.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut mi ut sapien sollicitudin cursus. In non purus vitae ante vehicula consectetur in ut neque. Nulla facilisi. In massa dolor, convallis eu risus vitae, feugiat scelerisque dolor. In dapibus felis consectetur felis rutrum mollis. Fusce efficitur massa vitae nisi aliquam convallis. Sed tristique efficitur sem sit amet euismod. Ut a leo tincidunt, porttitor nunc a, rhoncus est. Nulla ornare condimentum ligula vitae lacinia.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut mi ut sapien sollicitudin cursus. In non purus vitae ante vehicula consectetur in ut neque. Nulla facilisi. In massa dolor, convallis eu risus vitae, feugiat scelerisque dolor. In dapibus felis consectetur felis rutrum mollis. Fusce efficitur massa vitae nisi aliquam convallis. Sed tristique efficitur sem sit amet euismod. Ut a leo tincidunt, porttitor nunc a, rhoncus est. Nulla ornare condimentum ligula vitae lacinia.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut mi ut sapien sollicitudin cursus. In non purus vitae ante vehicula consectetur in ut neque. Nulla facilisi. In massa dolor, convallis eu risus vitae, feugiat scelerisque dolor. In dapibus felis consectetur felis rutrum mollis. Fusce efficitur massa vitae nisi aliquam convallis. Sed tristique efficitur sem sit amet euismod. Ut a leo tincidunt, porttitor nunc a, rhoncus est. Nulla ornare condimentum ligula vitae lacinia.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut mi ut sapien sollicitudin cursus. In non purus vitae ante vehicula consectetur in ut neque. Nulla facilisi. In massa dolor, convallis eu risus vitae, feugiat scelerisque dolor. In dapibus felis consectetur felis rutrum mollis. Fusce efficitur massa vitae nisi aliquam convallis. Sed tristique efficitur sem sit amet euismod. Ut a leo tincidunt, porttitor nunc a, rhoncus est. Nulla ornare condimentum ligula vitae lacinia.</li>
+                        <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut mi ut sapien sollicitudin cursus. In non purus vitae ante vehicula consectetur in ut neque. Nulla facilisi. In massa dolor, convallis eu risus vitae, feugiat scelerisque dolor. In dapibus felis consectetur felis rutrum mollis. Fusce efficitur massa vitae nisi aliquam convallis. Sed tristique efficitur sem sit amet euismod. Ut a leo tincidunt, porttitor nunc a, rhoncus est. Nulla ornare condimentum ligula vitae lacinia.</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="row my-5 py-3 caixa">
+                <div class="col-md-12">
+                    <p class="text-center my-auto">
+                        <button class="btn btn-danger btn-lg" type="button" data-toggle="collapse" data-target="#collapseData" aria-expanded="false" aria-controls="collapseData">
+                        RESERVE NOW
+                        </button>
+                    </p>
+                    <form>
+                        <div class="collapse" id="collapseData">
+                        <div class="form-group">
+                            <label for="name">Your name</label>
+                            <input type="password" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pax">Nº Persons</label>
+                            <input type="number" name="quantity" min="1" max="" class="form-control" id="pax">
+                        </div>
+  
+                          <div class="card card-body">
+                            <div class="row">	
+                              <div class="col-sm-6 col-md-3">
+                                <h5>AUG 5th</h5>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">
+                                      Alladin
+                                    </label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">
+                                      Yip Man 4
+                                    </label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">
+                                      Captain Marvel
+                                    </label>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6 col-md-3">
+                                  <h5>AUG 6th</h5>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">
+                                      The Adams Family
+                                    </label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">
+                                      Rambo V
+                                    </label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">
+                                      IT - Chapter 2
+                                    </label>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6 col-md-3">
+                                  <h5>AUG 7th</h5>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">
+                                      The Secret Life of Pets 2
+                                    </label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">
+                                      Glass
+                                    </label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">
+                                      John Wick: Chapter 3
+                                    </label>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6 col-md-3">
+                                  <h5>AUG 8th</h5>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">
+                                      The Lion King
+                                    </label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">
+                                      Hellboy
+                                    </label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox" value="">
+                                      X-Men: Dark Phoenix
+                                    </label>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-danger mt-3">Submit</button>  
+                        </div> 
+                    </form>
+                </div>    
+            </div>
+            <footer class="row py-3 text-center">
+                <div class="col-md-12">   
+                    <div class="text-white">
+                        <div>
+                            <h5> Brooklyn Vibes Events Co</h5>
+                            <p>29 Fort Greene Pl Brooklyn, NY 11217</p>
+                            <p>INFO - (718) 804-6400</p>
+                        </div>
+                    </div>                
+                </div>
+                <div class="col-md-12 my-auto">
+                        <ul class="social-network social-circle">
+                            <li>
+                                        <a href="#" class="icoMail" title="Email Us">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
+                                    </li>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank" class="icoFacebook" title="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/" target="_blank" class="icoTwitter" title="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com" target="_blank" class="icoInsta" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                
+                    <div class="col-md-12">
+                        <un class="nav-link mx-auto d-flex justify-content-center">
+                            <li class="list-inline-item">
+                                <i class="fas fa-link"></i>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.brooklynbridgepark.org/" target="_blank" >Brooklin Bridge Park</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <i class="fas fa-link"></i>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="http://brooklyn.news12.com/" target="_blank" >Brooklin</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <i class="fas fa-link"></i>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www1.nyc.gov/" target="_blank" >NYC</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <i class="fas fa-link"></i>
+                            </li>
+                        </un>
+                    </div>
+            </footer>
+        </main>
+    </div>
+    
+        
+        
+        
+        
+        
+      
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>  

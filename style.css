@@ -1,0 +1,314 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+}
+h1,h2,h3,h4,h5,h6, header p, button {
+    font-family: 'Black Ops One', cursive;
+    
+}
+@media  screen and (max-width: 768px) {
+  header p{
+    font-size: 1.3rem;
+    font-weight: 500;
+        
+    }
+}
+@media  screen and (min-width: 768px) {
+    header p{
+        font-size: 3.2rem;
+        font-weight: 500;}
+    .news-box{
+        max-height: 645px;
+        overflow:scroll;
+    }
+}
+
+
+.fa-film {font-size: 10vw}
+
+
+.reel {
+    background-image: url(film-reel.png);
+    background-repeat: repeat-x;
+    height: 50px;
+
+}
+
+/* Carousel*/
+
+.carousel {
+  margin-bottom: 3,5rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+/*scrolling text*/
+
+@media screen and (min-width: 800px) {
+  .scroll-text p{
+    font-size: 30px;
+  }
+}
+/**/
+
+.scroll-text {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+ background: black;
+ color: red;
+ 
+}
+.scroll-text p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ border: 1px solid black;
+ text-align: center;
+ font-family: 'Press Start 2P', cursive;
+ 
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: scroll-text 15s linear infinite;
+ -webkit-animation: scroll-text 15s linear infinite;
+ animation: scroll-text 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-text {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-text {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-text {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Browser bug fix */
+ -webkit-transform: translateX(100%); /* Browser bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Browser bug fix */
+ -webkit-transform: translateX(-100%); /* Browser bug fix */
+ transform: translateX(-100%); 
+ }
+}
+
+/*tabbed schedule*/
+.tabs {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#tab-button {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#tab-button li {
+  display: table-cell;
+  width: 20%;
+}
+#tab-button li a {
+  display: block;
+  padding: .5em;
+  background: #eee;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+}
+#tab-button li:not(:first-child) a {
+  border-left: none;
+}
+#tab-button li a:hover,
+#tab-button .is-active a {
+  border-bottom-color: transparent;
+  background: #fff;
+}
+.tab-contents {
+  padding: .5em 2em 1em;
+  border: 1px solid #ddd;
+}
+
+
+
+.tab-button-outer {
+  display: none;
+}
+.tab-contents {
+  margin-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  .tab-button-outer {
+    position: relative;
+    z-index: 2;
+    display: block;
+  }
+  .tab-select-outer {
+    display: none;
+  }
+  .tab-contents {
+    position: relative;
+    top: -1px;
+    margin-top: 0;
+  }
+}
+/*news*/
+
+
+.list-group-item {
+    overflow:hidden;
+    max-height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.list-group-item:hover {
+    max-height: 1000px;
+}
+
+/* scroll bar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+/*Registration*/
+#pax {max-width: 65px}
+
+.reserve-box {
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
+
+/*=========================
+footer
+ ================= */
+/* footer social icons */
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+
+/* footer social icons */
+.social-network a.icoFacebook,
+.social-network a.icoTwitter,
+.social-network a.icoInsta {
+	background-color:black;
+}
+.social-network a.icoFacebook:hover {
+	background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+	background-color:#33ccff;
+}
+.social-network a.icoInsta:hover {
+	background-color:#db2e7d;
+}
+
+a.socialIcon:hover, .socialHoverClass {
+	color:#44BCDD;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+.social-circle li i {
+	margin:0;
+	line-height:50px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i {
+	color: #fff;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+ 
+.caixa {
+    box-shadow: 0px 17px 50px 15px rgba(150,150,150,1);
+}    
+
+footer {
+    background-color: black;
+    box-shadow: 0px 17px 50px 15px rgba(150,150,150,1);
+}
+
+a:active,a:visited,a:link {
+    color: white
+}
